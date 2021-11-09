@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://ressources/Map_Assets/Zeldisaac/Chest_SpriteSheet.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Interaction.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 18.1289
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": false,
+"name": "Ouvre",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ) ],
+"loop": true,
+"name": "Inactif",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 10.0265, 8.34719 )
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 2 )
+
+[node name="Zone_Action" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+
+[node name="Coffre" type="AnimatedSprite" parent="Area2D/StaticBody2D"]
+frames = SubResource( 8 )
+animation = "Inactif"
+playing = true
+
+[node name="Colision" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+position = Vector2( 0, -0.444946 )
+shape = SubResource( 9 )

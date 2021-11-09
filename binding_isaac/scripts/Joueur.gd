@@ -7,10 +7,10 @@ func _process(delta):
 	var velocity = Vector2.ZERO
 	
 	Mouvement(velocity)
-	Animation_sprite()
+	Animation_joueur()
 
 
-func Animation_sprite():
+func Animation_joueur():
 	if Input.is_action_pressed("A") and !Input.is_action_pressed("S") and !Input.is_action_pressed("W"):
 		$Isaak.play("Gauche")
 

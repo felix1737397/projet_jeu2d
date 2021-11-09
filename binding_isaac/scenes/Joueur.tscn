@@ -77,14 +77,14 @@ animations = [ {
 "name": "Inactif",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 11 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 1 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 63 ), ExtResource( 37 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 49 ) ],
-"loop": true,
-"name": "Droite",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 68 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 66 ) ],
 "loop": true,
 "name": "Gauche",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 11 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 1 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 63 ), ExtResource( 37 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "Droite",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 3 ) ],
@@ -99,20 +99,20 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 5.48389
-height = 1.76112
+radius = 3.2
+height = 0.0
 
 [node name="Joueur" type="KinematicBody2D"]
-position = Vector2( 984.573, 529.144 )
 scale = Vector2( 2.5, 2.5 )
 script = ExtResource( 36 )
 
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Inactif"
-frame = 9
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 10.4 )
 scale = Vector2( 2.5, 2.5 )
 shape = SubResource( 2 )

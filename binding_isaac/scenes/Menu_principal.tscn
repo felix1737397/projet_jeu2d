@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ressources/Police/IsaacGame.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ressources/Isaak/background.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="Menu_principal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = -7.0
+margin_right = -1.0
+margin_bottom = 2.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jouer" type="Button" parent="."]
+margin_left = 802.425
+margin_top = 481.278
+margin_right = 867.425
+margin_bottom = 503.278
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.54902, 0.0588235, 0.0588235, 1 )
+text = "JOUER"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -410.098
+margin_top = -262.077
+margin_right = -247.098
+margin_bottom = -245.077
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.54902, 0.0588235, 0.0588235, 1 )
+text = "BOZO'S ADVENTURE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quitter" type="Button" parent="."]
+margin_left = 758.666
+margin_top = 602.417
+margin_right = 846.666
+margin_bottom = 624.417
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.54902, 0.0588235, 0.0588235, 1 )
+text = "QUITTER"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

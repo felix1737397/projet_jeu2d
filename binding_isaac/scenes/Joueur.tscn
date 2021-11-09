@@ -72,35 +72,7 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-<<<<<<< HEAD
 "frames": [ ExtResource( 26 ), ExtResource( 11 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 1 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 63 ), ExtResource( 37 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 49 ) ],
-=======
-"frames": [ ExtResource( 57 ), ExtResource( 60 ), ExtResource( 38 ), ExtResource( 55 ), ExtResource( 46 ), ExtResource( 64 ), ExtResource( 58 ), ExtResource( 54 ) ],
-"loop": true,
-"name": "Haut",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 3 ) ],
->>>>>>> a88272a3327d22e55d5e4d1d6cd5c9cfc6561705
-"loop": true,
-"name": "Bas",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Inactif",
-"speed": 5.0
-}, {
-<<<<<<< HEAD
-"frames": [ ExtResource( 4 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Inactif",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 3 ) ],
-=======
-"frames": [ ExtResource( 26 ), ExtResource( 11 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 1 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 63 ), ExtResource( 37 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 49 ) ],
->>>>>>> a88272a3327d22e55d5e4d1d6cd5c9cfc6561705
 "loop": true,
 "name": "Droite",
 "speed": 5.0
@@ -108,6 +80,21 @@ animations = [ {
 "frames": [ ExtResource( 68 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 66 ) ],
 "loop": true,
 "name": "Gauche",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Inactif",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 57 ), ExtResource( 60 ), ExtResource( 38 ), ExtResource( 55 ), ExtResource( 46 ), ExtResource( 64 ), ExtResource( 58 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "Haut",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Bas",
 "speed": 5.0
 } ]
 
@@ -122,11 +109,7 @@ script = ExtResource( 36 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Inactif"
-<<<<<<< HEAD
-frame = 4
-=======
-frame = 3
->>>>>>> a88272a3327d22e55d5e4d1d6cd5c9cfc6561705
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

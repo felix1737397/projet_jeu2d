@@ -12,22 +12,10 @@ func _process(delta):
 	var velocity = Vector2.ZERO
 	
 	Mouvement(velocity)
-	Animation_joueur()
-	Lancer()
+	Animation_sprite()
 
 
-func Lancer():
-		if $Timer.is_stopped() and Input.is_action_pressed("ui_up"):
-			shoot()
-			$Timer.start()
-
-
-func shoot():
-	
-	pass
-
-
-func Animation_joueur():
+func Animation_sprite():
 	if Input.is_action_pressed("A") and !Input.is_action_pressed("S") and !Input.is_action_pressed("W"):
 		$Isaak.play("Gauche")
 

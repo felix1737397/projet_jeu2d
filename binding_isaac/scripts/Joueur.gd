@@ -1,6 +1,11 @@
 extends KinematicBody2D
 
+var Bullet = preload("res://Scenes/Balle.tscn")
 export(int) var speed = 300
+var temps_rechargement = 0.5
+onready var timer_Rechargement = $Timer
+var bulletVelocity = 200
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -3,7 +3,7 @@
 [ext_resource path="res://ressources/Map_Assets/Zeldisaac/Tileset.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Coffre.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Joueur.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/baril.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Vase.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/feu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/roche.tscn" type="PackedScene" id=6]
 
@@ -513,3 +513,6 @@ position = Vector2( 635.287, 223.234 )
 
 [node name="Joueur" parent="." instance=ExtResource( 3 )]
 position = Vector2( 988, 448 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 676.727, 438.292 )

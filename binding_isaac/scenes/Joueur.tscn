@@ -109,7 +109,7 @@ script = ExtResource( 36 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Inactif"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -123,15 +123,12 @@ one_shot = true
 
 [node name="Bas" type="Position2D" parent="."]
 position = Vector2( 0, 19 )
-scale = Vector2( 1, 1 )
 
 [node name="Gauche" type="Position2D" parent="."]
 position = Vector2( -12.8, 0 )
-scale = Vector2( 1, 1 )
 
 [node name="Droite" type="Position2D" parent="."]
 position = Vector2( 13, 0 )
-scale = Vector2( 1, 1 )
 
 [node name="Haut" type="Position2D" parent="."]
 position = Vector2( 0.2, -14.2 )

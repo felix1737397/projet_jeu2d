@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 var Bullet = preload("res://Scenes/Balle.tscn")
 export(int) var speed = 300
-var temps_rechargement = 0.5
+var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
-var bulletVelocity = 200
+var bulletVelocity = 400
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,7 +13,30 @@ func _process(delta):
 	
 	Mouvement(velocity)
 	Animation_sprite()
+	Tirer()
 
+func Tirer():
+	if $Timer.is_stopped():
+		if Input.is_action_just_pressed("ui_up"):
+			var a = Bullet.instance()
+			a.start($Haut.global_position, 0, -bulletVelocity)
+			get_parent().add_child(a)
+			$Timer.start()
+		if Input.is_action_just_pressed("ui_down"):
+			var b = Bullet.instance()
+			b.start($Bas.global_position, 0, bulletVelocity)
+			get_parent().add_child(b)
+			$Timer.start()
+		if Input.is_action_just_pressed("ui_right"):
+			var c = Bullet.instance()
+			c.start($Droite.global_position, bulletVelocity, 0)
+			get_parent().add_child(c)
+			$Timer.start()
+		if Input.is_action_just_pressed("ui_left"):
+			var d = Bullet.instance()
+			d.start($Gauche.global_position, -bulletVelocity, 0)
+			get_parent().add_child(d)
+			$Timer.start()
 
 func Animation_sprite():
 	if Input.is_action_pressed("A") and !Input.is_action_pressed("S") and !Input.is_action_pressed("W"):

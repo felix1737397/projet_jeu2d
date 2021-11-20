@@ -14,7 +14,8 @@ func _process(delta):
 
 
 func _area_entered(object):  
-	ouvrir = true
+	if object.is_in_group("bozo"):
+		ouvrir = true
 
 
 func _area_exited(object):    

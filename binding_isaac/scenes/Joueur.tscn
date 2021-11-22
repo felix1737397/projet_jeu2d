@@ -79,7 +79,7 @@ script = ExtResource( 36 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Inactif"
-frame = 2
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

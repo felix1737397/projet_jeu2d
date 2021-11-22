@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 var changer_scene
 
@@ -9,7 +9,10 @@ func _ready():
 
 func _process(delta):
 	if changer_scene == true:
-		get_tree().change_scene("res://scene/Tutoriel_item.tscn")
+		get_tree().change_scene("res://scenes/Tutoriel_attack.tscn")
+		
+		
+
 
 
 func _area_entered(object):  

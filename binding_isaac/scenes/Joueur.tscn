@@ -76,10 +76,15 @@ height = 0.0
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 46 ), ExtResource( 25 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ) ],
 "loop": true,
-"name": "Inactif",
-"speed": 5.0
+"name": "Bas",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Haut",
+"speed": 7.0
 }, {
 "frames": [ ExtResource( 68 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 66 ) ],
 "loop": true,
@@ -91,15 +96,10 @@ animations = [ {
 "name": "Droite",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 46 ), ExtResource( 25 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 13 ) ],
 "loop": true,
-"name": "Bas",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "Haut",
-"speed": 7.0
+"name": "Inactif",
+"speed": 5.0
 } ]
 
 [node name="Joueur" type="KinematicBody2D" groups=[
@@ -116,7 +116,7 @@ shape = SubResource( 1 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Inactif"
-frame = 3
+frame = 5
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

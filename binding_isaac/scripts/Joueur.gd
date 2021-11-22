@@ -6,6 +6,10 @@ var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
 var bulletVelocity = 400
 
+export var vie = 1
+
+var velocity = Vector2()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -91,3 +95,18 @@ func Mouvement(velocity):
 	velocity = velocity.normalized()
 	
 	move_and_slide(velocity * speed)
+	
+	
+func hit():
+	
+	vie -= 1
+	queue_free()
+	get_tree().change_scene("res://scenes/Menu_principal.tscn")
+		
+		
+func _physics_process(delta):
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		velocity = velocity.bounce(collision.normal)
+		if collision.collider.has_method("hit"):
+			collision.collider.hit()

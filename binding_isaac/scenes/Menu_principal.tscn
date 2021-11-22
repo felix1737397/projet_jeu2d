@@ -90,4 +90,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="pressed" from="Quitter" to="." method="_on_Quitter_pressed"]
 [connection signal="pressed" from="Tutoriel" to="." method="_on_Tutoriel_pressed"]

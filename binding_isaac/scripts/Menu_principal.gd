@@ -16,3 +16,16 @@ func _ready():
 
 func _on_Tutoriel_pressed():
 		get_tree().change_scene("res://scenes/Tutoriel.tscn")
+
+
+func _on_Quitter_pressed():
+		get_tree().quit()
+
+func _on_Controles_pressed():
+		get_tree().change_scene("res://scenes/Controles.tscn")
+		
+
+
+func _on_Jouer_pressed():
+		get_tree().change_scene("res://scenes/Principale.tscn")
+	

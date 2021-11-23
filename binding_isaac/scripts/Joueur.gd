@@ -5,11 +5,20 @@ export(int) var speed = 300
 var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
 var bulletVelocity = 400
+var player_vol = Vector2(1,1)
+var old_player_pos
+
+func _ready():
+	old_player_pos = global_position
+
+var velocity = Vector2()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO
+	player_vol = global_position - old_player_pos
+	old_player_pos = global_position
 	
 	Mouvement(velocity)
 	Animation_sprite()
@@ -91,3 +100,18 @@ func Mouvement(velocity):
 	velocity = velocity.normalized()
 	
 	move_and_slide(velocity * speed)
+	
+	
+func hit():
+	
+	VariableGlobales.joueur_vie -= 1
+	queue_free()
+	get_tree().change_scene("res://scenes/Menu_principal.tscn")
+		
+		
+func _physics_process(delta):
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		velocity = velocity.bounce(collision.normal)
+		if collision.collider.has_method("hit"):
+			collision.collider.hit()

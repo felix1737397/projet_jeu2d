@@ -667,3 +667,4 @@ position = Vector2( 1766, 590 )
 
 [node name="Joueur" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1766, 516 )
+speed = null

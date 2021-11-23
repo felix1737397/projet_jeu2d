@@ -406,9 +406,6 @@ position = Vector2( 1367.53, 270.243 )
 [node name="chaudron" parent="." instance=ExtResource( 4 )]
 position = Vector2( 743.41, 380.917 )
 
-[node name="Joueur" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1248.37, 539.641 )
-
 [node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 676.727, 438.292 )
 
@@ -417,3 +414,6 @@ position = Vector2( 602.081, 662.626 )
 
 [node name="Porte" parent="." instance=ExtResource( 8 )]
 position = Vector2( 950.913, 56.981 )
+
+[node name="Joueur" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1248.37, 539.641 )

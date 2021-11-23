@@ -1,6 +1,5 @@
 extends Area2D
 
-var coin = preload("res://scenes/coin.tscn")
 var ouvrir = false
 
 func _ready():   
@@ -11,8 +10,7 @@ func _ready():
 func _process(delta):
 	if ouvrir == true:
 		if Input.is_action_just_pressed("E"):
-			var a = coin.instance()
-			get_parent().add_child(a)
+			get_tree().change_scene("res://scenes/map3.tscn")
 
 
 

@@ -17,15 +17,20 @@ func _physics_process(delta):
 	pause()
 				
 func pause():
+
+
 	if Input.is_action_just_pressed("esc"):
-		
+		get_tree().paused = true
 		$MarginContainer/Popup.show()
-		print("test")
 		$CanvasModulate.set_color(Color(1,0,0))
-		yield(get_tree().create_timer(2.0), "timeout")	
 		
-		if Input.is_action_just_pressed("x"):
-			$MarginContainer/Popup.hide()
+		
+	print(get_tree().paused)
+	
+	if get_tree().paused == false:
+		pass
+		#MarginContainer/Popup.hide()
+		#CanvasModulate.set_color(Color(1,1,1,1))
 			
 			
 

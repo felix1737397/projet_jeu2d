@@ -739,8 +739,6 @@ position = Vector2( 1442.91, 203.705 )
 
 [node name="vase34" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1532.33, 854.398 )
-collision_layer = 1
-collision_mask = 1
 
 [node name="Joueur" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1749.72, 541.666 )

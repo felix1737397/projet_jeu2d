@@ -12,10 +12,13 @@ script = ExtResource( 7 )
 [node name="Map" parent="." instance=ExtResource( 9 )]
 
 [node name="Chauve_souris" parent="." instance=ExtResource( 8 )]
-position = Vector2( 246.69, 310.986 )
+position = Vector2( 1738.65, 886.07 )
 
 [node name="Joueur" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1705.88, 525.665 )
 
 [node name="Globber" parent="." instance=ExtResource( 10 )]
-position = Vector2( 175.095, 549.63 )
+position = Vector2( 137.44, 541.11 )
+
+[node name="Chauve_souris2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1704.18, 189.265 )

@@ -7,7 +7,7 @@
 [ext_resource path="res://scripts/Chauve_souris.gd" type="Script" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 18.6295
+radius = 48.3217
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -33,5 +33,5 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CollisionShape2D"]
 scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 2 )
-frame = 3
+frame = 1
 playing = true

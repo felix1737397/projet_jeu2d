@@ -25,7 +25,7 @@ func _physics_process(delta):
 
 func Tirer():
 	if $Timer.is_stopped():
-		print('stop')
+		$AnimatedSprite.play("Attaque")
 		var b = Bullet.instance()
 		b.start($Position2D.global_position, rotate)
 		get_parent().add_child(b)

@@ -27,5 +27,5 @@ func _on_Controles_pressed():
 
 
 func _on_Jouer_pressed():
-		get_tree().change_scene("res://scenes/Principale.tscn")
+		get_tree().change_scene("res://scenes/Map.tscn")
 	

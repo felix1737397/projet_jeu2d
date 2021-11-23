@@ -5,6 +5,7 @@ export(int) var speed = 300
 var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
 var bulletVelocity = 400
+var vie = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -91,3 +92,9 @@ func Mouvement(velocity):
 	velocity = velocity.normalized()
 	
 	move_and_slide(velocity * speed)
+
+
+func hit():
+	vie -= 1
+	if vie == 0:
+		get_tree().change_scene("res://scenes/Menu_principal.tscn")

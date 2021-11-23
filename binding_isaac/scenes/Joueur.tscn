@@ -70,10 +70,6 @@
 [ext_resource path="res://ressources/Isaak/Isaak_Gauche1.png" type="Texture" id=68]
 [ext_resource path="res://ressources/Isaak/Isaak_Droite17.png" type="Texture" id=69]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 3.2
-height = 0.0
-
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 68 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 66 ) ],
@@ -102,6 +98,10 @@ animations = [ {
 "speed": 7.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 3.2
+height = 0.0
+
 [node name="Joueur" type="KinematicBody2D" groups=[
 "bozo",
 ]]
@@ -109,16 +109,17 @@ scale = Vector2( 2.5, 2.5 )
 collision_mask = 3
 script = ExtResource( 36 )
 
+[node name="Isaak" type="AnimatedSprite" parent="."]
+scale = Vector2( 1, 1 )
+frames = SubResource( 2 )
+animation = "Inactif"
+frame = 6
+playing = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 10.4 )
 scale = Vector2( 2.5, 2.5 )
 shape = SubResource( 1 )
-
-[node name="Isaak" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
-animation = "Inactif"
-frame = 4
-playing = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.35

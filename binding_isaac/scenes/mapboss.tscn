@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://scenes/feu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ressources/Map_Assets/Zeldisaac/Tileset.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://scenes/Coffre.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Boss.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Joueur.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Menu_en_jeu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/mapboss.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -617,7 +619,11 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 11/z_index = 0
 
+[sub_resource type="CanvasItemMaterial" id=48]
+light_mode = 2
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Mur et plancher" type="TileMap" parent="."]
 tile_set = SubResource( 47 )
@@ -699,3 +705,25 @@ position = Vector2( 306, 554 )
 
 [node name="Joueur" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1560, 514 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1918.0
+margin_bottom = 1083.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="MarginContainer"]
+pause_mode = 2
+material = SubResource( 48 )
+margin_right = 1918.0
+margin_bottom = 1083.0
+
+[node name="Menu_en_jeu" parent="MarginContainer/Popup" instance=ExtResource( 8 )]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]

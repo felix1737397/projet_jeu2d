@@ -22,3 +22,12 @@ position = Vector2( 137.44, 541.11 )
 
 [node name="Chauve_souris2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1704.18, 189.265 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

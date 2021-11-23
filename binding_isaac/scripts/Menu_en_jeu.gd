@@ -12,6 +12,7 @@ func _ready():
 
 
 func _on_Retour_pressed():
+	print("test")
 	get_tree().change_scene("res://scenes/Menu_principal.tscn")
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://ressources/Map_Assets/Zeldisaac/Tileset.png" type="Texture" id=1]
 [ext_resource path="res://scenes/GlobberGauche.tscn" type="PackedScene" id=2]
@@ -8,40 +8,39 @@
 [ext_resource path="res://scenes/Coffre.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Globber.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Porte.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Menu_en_jeu.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/feu.tscn" type="PackedScene" id=10]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
 
-func ouvrir_coffre():
-	pass 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-
 func _physics_process(delta):
 	
 	pause()
-
+				
 func pause():
 	
 
 	if Input.is_action_just_pressed(\"esc\"):
 		get_tree().paused = true
 		$MarginContainer/Popup.show()
-		$Hud/CanvasModulate.set_color(Color(1,0,0))
+		$CanvasModulate.set_color(Color(1,0,0))
+		
 		
 		
 	print(get_tree().paused)
 	
 	if get_tree().paused == false:
-		pass
-		#$MarginContainer/Popup.hide()
-		#$Hud/CanvasModulate.set_color(Color(1,1,1,1))
+		$MarginContainer/Popup.hide()
+		$CanvasModulate.set_color(Color(1,1,1,1))
+
+
+			
 "
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
@@ -404,6 +403,9 @@ points = PoolVector2Array( 32, 32, 0, 0, 0, 32, 32, 32 )
 5/shapes = [  ]
 5/z_index = 0
 
+[sub_resource type="CanvasItemMaterial" id=8]
+light_mode = 2
+
 [node name="Map2" type="Node2D"]
 script = SubResource( 1 )
 
@@ -418,6 +420,7 @@ tile_data = PoolIntArray( 0, 4, 0, 1, 4, 3, 2, 4, 3, 3, 4, 3, 4, 4, 3, 5, 4, 3, 
 
 [node name="Porte" parent="." instance=ExtResource( 8 )]
 position = Vector2( 962.383, 56.981 )
+endroit = "res://scenes/Map2.tscn"
 
 [node name="Globber" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1295.32, 118.981 )
@@ -482,3 +485,25 @@ position = Vector2( 963.496, 939.058 )
 
 [node name="Node2D" parent="." instance=ExtResource( 10 )]
 position = Vector2( 367.161, 442.186 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1918.0
+margin_bottom = 1083.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="MarginContainer"]
+pause_mode = 2
+material = SubResource( 8 )
+margin_right = 1918.0
+margin_bottom = 1083.0
+
+[node name="Menu_en_jeu" parent="MarginContainer/Popup" instance=ExtResource( 9 )]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]

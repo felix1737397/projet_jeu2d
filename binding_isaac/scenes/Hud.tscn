@@ -50,6 +50,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Vie2" type="TextureRect" parent="."]
+visible = false
+margin_left = 76.5393
+margin_top = -12.9846
+margin_right = 576.539
+margin_bottom = 487.015
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Argent" type="TextureRect" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0

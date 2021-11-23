@@ -7,7 +7,7 @@
 [ext_resource path="res://scripts/Chauve_souris.gd" type="Script" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 25.7184
+radius = 48.3217
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {

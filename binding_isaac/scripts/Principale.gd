@@ -28,8 +28,9 @@ func pause():
 	print(get_tree().paused)
 	
 	if get_tree().paused == false:
-		$MarginContainer/Popup.hide()
-		$CanvasModulate.set_color(Color(1,1,1,1))
+		pass
+		#MarginContainer/Popup.hide()
+		#CanvasModulate.set_color(Color(1,1,1,1))
 			
 			
 

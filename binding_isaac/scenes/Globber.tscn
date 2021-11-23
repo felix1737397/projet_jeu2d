@@ -12,22 +12,12 @@
 [ext_resource path="res://ressources/Isaak/Glizzy2.png" type="Texture" id=10]
 [ext_resource path="res://scripts/Globber.gd" type="Script" id=11]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 7.80313
 height = 8.99338
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": false,
-"name": "Cache",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "Inactfif",
-"speed": 3.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 10 ), ExtResource( 1 ) ],
 "loop": false,
 "name": "Aparait",
@@ -37,10 +27,23 @@ animations = [ {
 "loop": false,
 "name": "Attaque",
 "speed": 3.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Inactfif",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "Cache",
+"speed": 5.0
 } ]
 
-[node name="Globber" type="KinematicBody2D"]
+[node name="Globber" type="KinematicBody2D" groups=[
+"ennemi",
+]]
 scale = Vector2( 2, 2 )
+collision_layer = 2
 collision_mask = 2
 script = ExtResource( 11 )
 
@@ -52,7 +55,7 @@ one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.33371, -6.00677 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )

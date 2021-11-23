@@ -23,6 +23,7 @@ func pause():
 		$CanvasModulate.set_color(Color(1,0,0))
 		
 		
+		
 	print(get_tree().paused)
 	
 	if get_tree().paused == false:

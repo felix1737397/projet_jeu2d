@@ -91,14 +91,14 @@ animations = [ {
 "name": "Gauche",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 46 ), ExtResource( 25 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ) ],
-"loop": true,
-"name": "Bas",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "Haut",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 46 ), ExtResource( 25 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "Bas",
 "speed": 7.0
 } ]
 
@@ -117,7 +117,7 @@ shape = SubResource( 1 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Inactif"
-frame = 4
+frame = 8
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

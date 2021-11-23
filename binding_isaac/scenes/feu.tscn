@@ -27,7 +27,7 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "default",
-"speed": 10.0
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=6]
@@ -43,7 +43,6 @@ collision_mask = 3
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StaticBody2D"]
 scale = Vector2( 2.25992, 1.49216 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

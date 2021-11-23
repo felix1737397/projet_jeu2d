@@ -120,7 +120,7 @@ position = Vector2( 1290.21, 499.458 )
 scale = Vector2( 4.62819, 4.95697 )
 frames = SubResource( 3 )
 animation = "Inactif"
-frame = 6
+frame = 1
 speed_scale = 2.0
 playing = true
 

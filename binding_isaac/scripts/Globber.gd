@@ -3,6 +3,7 @@ extends KinematicBody2D
 
 var Bullet = preload("res://scenes/BalleGlobber.tscn")
 export var vie = 2
+export var rotate = 1
 var velocite = Vector2()
 export var vitesse = 100
 
@@ -26,7 +27,7 @@ func Tirer():
 	if $Timer.is_stopped():
 		print('stop')
 		var b = Bullet.instance()
-		b.start($Position2D.global_position, rotation)
+		b.start($Position2D.global_position, rotate)
 		get_parent().add_child(b)
 		$Timer.start()
 

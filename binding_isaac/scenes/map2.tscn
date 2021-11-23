@@ -366,7 +366,7 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 32, 32, 32 )
 5/shapes = [  ]
 5/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Mur et plancher" type="TileMap" parent="."]
 tile_set = SubResource( 6 )

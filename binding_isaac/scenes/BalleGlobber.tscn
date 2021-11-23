@@ -22,7 +22,6 @@ radius = 25.7744
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
-collision_layer = 2
 collision_mask = 2
 script = ExtResource( 8 )
 

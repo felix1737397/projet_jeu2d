@@ -15,5 +15,4 @@ func _physics_process(delta):
 		queue_free()
 		print(collision.collider.name)
 		if collision.collider.has_method("hit"):
-			print('toucher')
 			collision.collider.hit()

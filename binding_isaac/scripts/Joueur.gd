@@ -6,7 +6,6 @@ var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
 var bulletVelocity = 400
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO

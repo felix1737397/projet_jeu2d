@@ -1,7 +1,8 @@
 extends Area2D
 
-var coin = preload("res://scenes/coin.tscn")
 var ouvrir = false
+var salle = 0
+export var endroit = "res://scenes/Principale.tscn"
 
 func _ready():   
 	connect("body_entered" , self, "_area_entered")     
@@ -9,10 +10,9 @@ func _ready():
  
 
 func _process(delta):
-	if ouvrir == true:
-		if Input.is_action_just_pressed("E"):
-			var a = coin.instance()
-			get_parent().add_child(a)
+		if ouvrir == true:
+			if Input.is_action_just_pressed("E"):
+				get_tree().change_scene(endroit)
 
 
 

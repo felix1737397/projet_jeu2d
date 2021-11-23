@@ -32,10 +32,22 @@ size_flags_horizontal = 3
 custom_constants/separation = 50
 alignment = 1
 
-[node name="Retour" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 438.0
+[node name="Reprendre" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 374.0
 margin_right = 641.0
-margin_bottom = 515.0
+margin_bottom = 451.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "REPRENDRE"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retour" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 501.0
+margin_right = 641.0
+margin_bottom = 578.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "RETOUR AU MENU"
@@ -45,9 +57,9 @@ __meta__ = {
 }
 
 [node name="Quitter" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 565.0
+margin_top = 628.0
 margin_right = 641.0
-margin_bottom = 642.0
+margin_bottom = 705.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "QUITTER"
@@ -62,5 +74,6 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 size_flags_horizontal = 3
 
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Reprendre" to="." method="_on_Reprendre_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Retour" to="." method="_on_Retour_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Quitter" to="." method="_on_Quitter_pressed"]

@@ -440,7 +440,6 @@ margin_right = 1918.0
 margin_bottom = 1083.0
 
 [node name="Menu_en_jeu" parent="MarginContainer/Popup" instance=ExtResource( 7 )]
-pause_mode = 2
 
 [node name="Retour" type="Label" parent="."]
 margin_left = 101.603

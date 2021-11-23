@@ -22,8 +22,24 @@ func pause():
 		$MarginContainer/Popup.show()
 		$CanvasModulate.set_color(Color(1,0,0))
 		
-		if Input.is_action_just_pressed("ui_home"):
-			$MarginContainer/Popup.hide()
+		
+	print(get_tree().paused)
+	
+	if get_tree().paused == false:
+		$MarginContainer/Popup.hide()
+		$CanvasModulate.set_color(Color(1,1,1,1))
+
+
+			
+		
+
+		
+
+		
+	
+		
+		
+	
 			
 			
 

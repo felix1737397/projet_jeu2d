@@ -155,12 +155,14 @@ shape = SubResource( 1 )
 modulate = Color( 1, 1, 1, 0.486275 )
 position = Vector2( 0, 15 )
 frames = SubResource( 11 )
-animation = "Idle"
+animation = "Rotation"
+frame = 1
 playing = true
 
 [node name="Coin" type="AnimatedSprite" parent="Area2D"]
 frames = SubResource( 21 )
-animation = "Idle"
+animation = "Rotation"
+frame = 1
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="Area2D"]

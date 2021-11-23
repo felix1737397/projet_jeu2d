@@ -5,13 +5,13 @@ export(int) var speed = 300
 var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
 var bulletVelocity = 400
-var vie = 1
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO
 	
-	if vie != 0:
+	if VariableGlobales.joueur_vie > 0:
 		Mouvement(velocity)
 		Animation_sprite()
 		Tirer()
@@ -38,6 +38,7 @@ func Tirer():
 			d.start($Gauche.global_position, -bulletVelocity, 0)
 			get_parent().add_child(d)
 			$Timer.start()
+
 
 func Animation_sprite():
 	if Input.is_action_pressed("A") and !Input.is_action_pressed("S") and !Input.is_action_pressed("W"):
@@ -95,8 +96,8 @@ func Mouvement(velocity):
 
 
 func hit():
-	vie -= 1
-	if vie == 0:
+	VariableGlobales.joueur_vie -= 1
+	if VariableGlobales.joueur_vie <= 0:
 		$Isaak.play("Mort")
 		yield(get_tree().create_timer(1.45), "timeout")
 		VariableGlobales.joueur_clef = false

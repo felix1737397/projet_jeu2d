@@ -1,8 +1,8 @@
 extends Area2D
 
-var objet
-var target = false
-var speed = 300
+var ouvrir = false
+export var endroit = "res://scenes/Principale.tscn"
+
 
 func _ready():   
 	connect("body_entered" , self, "_area_entered")     
@@ -10,19 +10,15 @@ func _ready():
  
 
 func _process(delta):
-	if target == true:
-		$Particles2D.set_emitting(true)
-		yield(get_tree().create_timer(1), "timeout")
-		queue_free()
-
+		if ouvrir == true:
+			if Input.is_action_just_pressed("E"):
+				get_tree().change_scene("res://scenes/Menu_principal.tscn")
 
 
 func _area_entered(object):  
 	if object.is_in_group("bozo"):
-		target = true
-		objet = object
-		print(target)
+		ouvrir = true
 
 
 func _area_exited(object):    
-	target = false
+	ouvrir = false

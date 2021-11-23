@@ -98,5 +98,5 @@ func hit():
 	vie -= 1
 	if vie == 0:
 		$Isaak.play("Mort")
-		yield(get_tree().create_timer(1.7), "timeout")
+		yield(get_tree().create_timer(1.45), "timeout")
 		get_tree().change_scene("res://scenes/Menu_principal.tscn")

@@ -1,7 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ressources/Mecha-stone Golem 0.1/Mecha-stone Golem 0.1/weapon PNG/arm_projectile_glowing.png" type="Texture" id=1]
-[ext_resource path="res://bras_boss.gd" type="Script" id=2]
+[ext_resource path="res://scripts/bras_boss.gd" type="Script" id=2]
+
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4

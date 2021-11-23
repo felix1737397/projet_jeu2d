@@ -15,8 +15,6 @@ func _process(delta):
 				get_tree().change_scene(endroit)
 
 
-
-
 func _area_entered(object):  
 	if object.is_in_group("bozo"):
 		ouvrir = true

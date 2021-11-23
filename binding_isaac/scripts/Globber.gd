@@ -14,8 +14,8 @@ var dir
 
 func _physics_process(delta):	
 	if vie != 0:
-		Tirer()
-	
+		if $Timer.is_stopped():
+			Tirer()
 	var collision = move_and_collide(velocite * delta)
 	if collision:
 		velocite = velocite.bounce(collision.normal)
@@ -24,12 +24,12 @@ func _physics_process(delta):
 
 
 func Tirer():
-	if $Timer.is_stopped():
-		$AnimatedSprite.play("Attaque")
-		var b = Bullet.instance()
-		b.start($Position2D.global_position, rotate)
-		get_parent().add_child(b)
-		$Timer.start()
+	var b = Bullet.instance()
+	b.start($Position2D.global_position, rotate)
+	$AnimatedSprite.play("Attaque")
+	get_parent().add_child(b)
+	$Timer.start()
+
 
 
 func hit():

@@ -11,9 +11,10 @@ var vie = 1
 func _process(delta):
 	var velocity = Vector2.ZERO
 	
-	Mouvement(velocity)
-	Animation_sprite()
-	Tirer()
+	if vie != 0:
+		Mouvement(velocity)
+		Animation_sprite()
+		Tirer()
 
 func Tirer():
 	if $Timer.is_stopped():
@@ -96,4 +97,7 @@ func Mouvement(velocity):
 func hit():
 	vie -= 1
 	if vie == 0:
+		$Isaak.play("Mort")
+		yield(get_tree().create_timer(1.45), "timeout")
+		VariableGlobales.joueur_clef = false
 		get_tree().change_scene("res://scenes/Menu_principal.tscn")

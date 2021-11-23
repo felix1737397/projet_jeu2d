@@ -37,7 +37,7 @@ func Tirer():
 		$Timer.start()
 
 func hit():
-	vie -=10
+	vie -= 1
 	if vie == 0:
 		$Sprite.play("mort")
 		$CollisionShape2D.queue_free()

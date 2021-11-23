@@ -1,6 +1,6 @@
 extends Area2D
 
-var coin = preload("res://scenes/coin.tscn")
+var clef = preload("res://scenes/Clef.tscn")
 var ouvrir
 var once = true
 
@@ -13,11 +13,12 @@ func _process(delta):
 	if ouvrir == true:
 		if Input.is_action_just_pressed("E"):
 			$StaticBody2D/Coffre.play("Ouvre")
-			VariableGlobales.joueur_argent += 1;
+			VariableGlobales.joueur_clef = true;
 			if once == true:
-				var a = coin.instance()
+				var a = clef.instance()
 				get_parent().add_child(a)
 				once = false
+				
 
 
 func _area_entered(object):  

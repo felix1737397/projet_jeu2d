@@ -450,12 +450,6 @@ rotate = -44
 position = Vector2( 707.983, 458.685 )
 rotate = -44
 
-[node name="Coffre" parent="." instance=ExtResource( 6 )]
-position = Vector2( 342.105, 844.572 )
-
-[node name="Coffre2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1764.42, 933.466 )
-
 [node name="Vase" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1361.29, 395.559 )
 
@@ -486,7 +480,7 @@ position = Vector2( 714.72, 225.978 )
 [node name="Joueur" parent="." instance=ExtResource( 3 )]
 position = Vector2( 963.496, 939.058 )
 
-[node name="Node2D" parent="." instance=ExtResource( 10 )]
+[node name="Feu" parent="." instance=ExtResource( 10 )]
 position = Vector2( 367.161, 442.186 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -512,3 +506,10 @@ margin_bottom = 1083.0
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 [node name="Hud" parent="." instance=ExtResource( 11 )]
+
+[node name="Coffre" parent="." instance=ExtResource( 6 )]
+position = Vector2( 329.633, 844.572 )
+
+[node name="Coffre2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1746.16, 921.189 )
+

@@ -1,7 +1,6 @@
 extends Area2D
 
 var ouvrir = false
-var salle = 0
 export var endroit = "res://scenes/Principale.tscn"
 
 

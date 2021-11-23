@@ -11,40 +11,7 @@
 [ext_resource path="res://scenes/Menu_en_jeu.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/feu.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Hud.tscn" type="PackedScene" id=11]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-func _physics_process(delta):
-	
-	pause()
-	
-	$Hud/Texte_argent.text = str(VariableGlobales.joueur_argent)
-				
-func pause():
-	
-
-	if Input.is_action_just_pressed(\"esc\"):
-		get_tree().paused = true
-		$MarginContainer/Popup.show()
-		$CanvasModulate.set_color(Color(1,0,0))
-		
-		
-		
-	print(get_tree().paused)
-	
-	if get_tree().paused == false:
-		$MarginContainer/Popup.hide()
-		$CanvasModulate.set_color(Color(1,1,1,1))
-
-
-			
-"
+[ext_resource path="res://scripts/Map.gd" type="Script" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -409,8 +376,8 @@ points = PoolVector2Array( 32, 32, 0, 0, 0, 32, 32, 32 )
 [sub_resource type="CanvasItemMaterial" id=8]
 light_mode = 2
 
-[node name="Map2" type="Node2D"]
-script = SubResource( 1 )
+[node name="Map" type="Node2D"]
+script = ExtResource( 12 )
 
 [node name="Mur et plancher" type="TileMap" parent="."]
 tile_set = SubResource( 7 )
@@ -477,9 +444,6 @@ position = Vector2( 524.965, 950.229 )
 [node name="Chauve_souris5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 714.72, 225.978 )
 
-[node name="Joueur" parent="." instance=ExtResource( 3 )]
-position = Vector2( 963.496, 939.058 )
-
 [node name="Feu" parent="." instance=ExtResource( 10 )]
 position = Vector2( 367.161, 442.186 )
 
@@ -507,9 +471,11 @@ margin_bottom = 1083.0
 
 [node name="Hud" parent="." instance=ExtResource( 11 )]
 
-[node name="Coffre" parent="." instance=ExtResource( 6 )]
-position = Vector2( 329.633, 844.572 )
+[node name="CoffreCoin1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 322.1, 861.491 )
 
-[node name="Coffre2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1746.16, 921.189 )
+[node name="CoffreCoin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1658.36, 897.984 )
 
+[node name="Joueur" parent="." instance=ExtResource( 3 )]
+position = Vector2( 963.496, 939.058 )

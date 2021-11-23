@@ -15,54 +15,54 @@ region = Rect2( 0, 0, 16, 8 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 16, 8 )
+region = Rect2( 16, 0, 16, 8 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 16, 0, 16, 8 )
+region = Rect2( 32, 0, 16, 8 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 32, 0, 16, 8 )
+region = Rect2( 48, 0, 16, 8 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 48, 0, 16, 8 )
+region = Rect2( 64, 0, 16, 8 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 64, 0, 16, 8 )
+region = Rect2( 80, 0, 16, 8 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 80, 0, 16, 8 )
+region = Rect2( 96, 0, 16, 8 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 96, 0, 16, 8 )
+region = Rect2( 112, 0, 16, 8 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 112, 0, 16, 8 )
+region = Rect2( 0, 0, 16, 8 )
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ SubResource( 2 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "Rotation",
 "speed": 12.0
+}, {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
 } ]
 
 [sub_resource type="AtlasTexture" id=12]
@@ -73,54 +73,54 @@ region = Rect2( 0, 0, 32, 32 )
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 32, 32 )
+region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 32, 32 )
+region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 32, 32 )
+region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 96, 0, 32, 32 )
+region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 0, 32, 32, 32 )
+region = Rect2( 32, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 32, 32, 32, 32 )
+region = Rect2( 64, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 64, 32, 32, 32 )
+region = Rect2( 96, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 96, 32, 32, 32 )
+region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
-"frames": [ SubResource( 12 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
 "name": "Rotation",
 "speed": 12.0
+}, {
+"frames": [ SubResource( 20 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
 } ]
 
 [sub_resource type="Gradient" id=22]
@@ -156,13 +156,13 @@ modulate = Color( 1, 1, 1, 0.486275 )
 position = Vector2( 0, 15 )
 frames = SubResource( 11 )
 animation = "Rotation"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Coin" type="AnimatedSprite" parent="Area2D"]
 frames = SubResource( 21 )
 animation = "Rotation"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="Area2D"]

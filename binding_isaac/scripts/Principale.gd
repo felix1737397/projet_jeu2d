@@ -20,6 +20,7 @@ func _physics_process(delta):
 				
 func pause():
 	if Input.is_action_just_pressed("esc"):
+		
 		$MarginContainer/Popup.show()
 		print("test")
 		$CanvasModulate.set_color(Color(1,0,0))

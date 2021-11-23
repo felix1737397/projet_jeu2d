@@ -6,8 +6,6 @@ var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
 var bulletVelocity = 400
 
-export var vie = 1
-
 var velocity = Vector2()
 
 
@@ -99,7 +97,7 @@ func Mouvement(velocity):
 	
 func hit():
 	
-	vie -= 1
+	VariableGlobales.joueur_vie -= 1
 	queue_free()
 	get_tree().change_scene("res://scenes/Menu_principal.tscn")
 		

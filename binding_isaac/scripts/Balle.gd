@@ -17,6 +17,9 @@ func _physics_process(delta):
 			if collision.collider.has_method("collision_balle"):
 				collision.collider.collision_balle()
 			queue_free()
+			if collision.collider.has_method("hit"):
+				collision.collider.hit()
+			queue_free()
 			
 		
 
@@ -24,6 +27,3 @@ func _physics_process(delta):
 # Lorsque la balle touche quelque chose, elle disparait.
 func hit():
 	queue_free()
-	
-	
-	

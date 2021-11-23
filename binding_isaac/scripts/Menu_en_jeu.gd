@@ -1,7 +1,9 @@
-extends Control
+extends MarginContainer
 
 
-
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,14 +15,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Tutoriel_pressed():
-		get_tree().change_scene("res://scenes/Tutoriel.tscn")
+func _on_Retour_pressed():
+	get_tree().change_scene("res://scenes/Menu_principal.tscn")
 
 
 func _on_Quitter_pressed():
-		get_tree().quit()
-
-func _on_Controles_pressed():
-		get_tree().change_scene("res://scenes/Controles.tscn")
-		
+	get_tree().quit()

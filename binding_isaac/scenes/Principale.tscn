@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scripts/Argent.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Menu_en_jeu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ressources/Isaak/argent.png" type="Texture" id=3]
+[ext_resource path="res://ressources/Isaak/Yum_Heart_Icon.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Joueur.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ressources/Police/IsaacGame.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scripts/Principale.gd" type="Script" id=7]
+[ext_resource path="res://scenes/salle2.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_color = Color( 0.835294, 0.713726, 0.611765, 1 )
+font_data = ExtResource( 6 )
+
+[node name="Principale" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Salle" parent="." instance=ExtResource( 8 )]
+
+[node name="Joueur" parent="." instance=ExtResource( 5 )]
+position = Vector2( 517.268, 540.331 )
+
+[node name="Texte_argent" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 1710.3
+margin_top = 18.9537
+margin_right = 1805.3
+margin_bottom = 58.9537
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.835294, 0.713726, 0.611765, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1912.0
+margin_bottom = 1114.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="Popup" parent="MarginContainer"]
+margin_right = 1912.0
+margin_bottom = 1114.0
+
+[node name="Menu_en_jeu" parent="MarginContainer/Popup" instance=ExtResource( 2 )]
+
+[node name="Vie" type="TextureRect" parent="."]
+margin_left = -2.96188
+margin_top = -12.9846
+margin_right = 497.038
+margin_bottom = 487.015
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Argent" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 1810.46
+margin_top = -13.6753
+margin_right = 2310.46
+margin_bottom = 486.325
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]

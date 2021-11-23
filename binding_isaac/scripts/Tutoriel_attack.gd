@@ -11,6 +11,8 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _process(delta):
-	if Input.is_action_just_pressed("x"):
-		get_tree().change_scene("res://scenes/Tutoriel.tscn")
+func _physics_process(delta):
+	
+
+		if Input.is_action_just_pressed("x"):
+			get_tree().change_scene("res://scenes/Tutoriel.tscn")

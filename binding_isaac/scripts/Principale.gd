@@ -1,6 +1,11 @@
 extends Node2D
 
 
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,19 +14,17 @@ func _ready():
 
 func _physics_process(delta):
 	
-	if Input.is_action_just_pressed("x"):
-		get_tree().change_scene("res://scenes/Tutoriel.tscn")
-	
 	pause()
 				
 func pause():
 	if Input.is_action_just_pressed("esc"):
+		
 		$MarginContainer/Popup.show()
 		print("test")
 		$CanvasModulate.set_color(Color(1,0,0))
 		yield(get_tree().create_timer(2.0), "timeout")	
 		
-		if Input.is_action_just_pressed("esc"):
+		if Input.is_action_just_pressed("x"):
 			$MarginContainer/Popup.hide()
 			
 			

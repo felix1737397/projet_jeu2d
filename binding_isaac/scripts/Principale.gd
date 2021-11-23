@@ -13,8 +13,6 @@ func _ready():
 
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("x"):
-		get_tree().change_scene("res://scenes/Tutoriel.tscn")
 	
 	pause()
 				
@@ -26,7 +24,7 @@ func pause():
 		$CanvasModulate.set_color(Color(1,0,0))
 		yield(get_tree().create_timer(2.0), "timeout")	
 		
-		if Input.is_action_just_pressed("esc"):
+		if Input.is_action_just_pressed("x"):
 			$MarginContainer/Popup.hide()
 			
 			

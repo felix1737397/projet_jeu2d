@@ -4,12 +4,12 @@
 animations = [ {
 "frames": [  ],
 "loop": true,
-"name": "Spawn",
+"name": "New Anim",
 "speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
-"name": "New Anim",
+"name": "Spawn",
 "speed": 5.0
 } ]
 

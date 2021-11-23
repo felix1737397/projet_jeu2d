@@ -20,4 +20,4 @@ func _on_Retour_pressed():
 
 
 func _on_Quitter_pressed():
-	get_tree().quit() # Replace with function body.
+	get_tree().quit()

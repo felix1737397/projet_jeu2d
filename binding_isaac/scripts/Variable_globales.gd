@@ -1,6 +1,6 @@
 extends Node
 
 
-var joueur_vie = 0
+var joueur_vie = 1
 
-var joueur_argent = 100
+var joueur_argent = 0

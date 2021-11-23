@@ -116,7 +116,7 @@ shape = SubResource( 1 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Inactif"
-frame = 5
+frame = 8
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

@@ -396,10 +396,10 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 32, 32, 32 )
 7/shapes = [  ]
 7/z_index = 0
 
-[sub_resource type="CanvasItemMaterial" id=8]
+[sub_resource type="CanvasItemMaterial" id=7]
 light_mode = 2
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=8]
 size = 70
 font_data = ExtResource( 5 )
 
@@ -435,7 +435,7 @@ __meta__ = {
 
 [node name="Popup" type="Popup" parent="MarginContainer"]
 pause_mode = 2
-material = SubResource( 8 )
+material = SubResource( 7 )
 margin_right = 1918.0
 margin_bottom = 1083.0
 
@@ -447,7 +447,7 @@ margin_left = 101.603
 margin_top = 102.774
 margin_right = 2046.6
 margin_bottom = 182.774
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 0.54902, 0.0588235, 0.0588235, 1 )
 text = "Appuyer sur x pour retourner à l'acceuil du tutoriel"
 __meta__ = {

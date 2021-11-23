@@ -9,7 +9,7 @@
 [ext_resource path="res://scripts/Principale.gd" type="Script" id=7]
 [ext_resource path="res://scenes/salle2.tscn" type="PackedScene" id=8]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 outline_color = Color( 0.835294, 0.713726, 0.611765, 1 )
 font_data = ExtResource( 6 )
@@ -29,7 +29,7 @@ margin_left = 1710.3
 margin_top = 18.9537
 margin_right = 1805.3
 margin_bottom = 58.9537
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.835294, 0.713726, 0.611765, 1 )
 script = ExtResource( 1 )
 __meta__ = {

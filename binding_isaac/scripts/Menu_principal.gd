@@ -21,6 +21,7 @@ func _on_Tutoriel_pressed():
 func _on_Quitter_pressed():
 		get_tree().quit()
 
+
 func _on_Controles_pressed():
 		get_tree().change_scene("res://scenes/Controles.tscn")
 		

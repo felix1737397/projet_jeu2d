@@ -5,11 +5,18 @@ export(int) var speed = 300
 var temps_rechargement = 0.35
 onready var timer_Rechargement = $Timer
 var bulletVelocity = 400
+var player_vol = Vector2(1,1)
+var old_player_pos
+
+func _ready():
+	old_player_pos = global_position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO
+	player_vol = global_position - old_player_pos
+	old_player_pos = global_position
 	
 	Mouvement(velocity)
 	Animation_sprite()

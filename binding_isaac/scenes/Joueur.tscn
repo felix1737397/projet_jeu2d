@@ -81,14 +81,14 @@ animations = [ {
 "name": "Inactif",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 68 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 66 ) ],
-"loop": true,
-"name": "Gauche",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 11 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 1 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 63 ), ExtResource( 37 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 49 ) ],
 "loop": true,
 "name": "Droite",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 68 ), ExtResource( 53 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 62 ), ExtResource( 47 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 66 ) ],
+"loop": true,
+"name": "Gauche",
 "speed": 7.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 46 ), ExtResource( 25 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 60 ), ExtResource( 57 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 38 ), ExtResource( 23 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 55 ) ],
@@ -106,6 +106,7 @@ animations = [ {
 "bozo",
 ]]
 scale = Vector2( 2.5, 2.5 )
+collision_mask = 3
 script = ExtResource( 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -116,7 +117,7 @@ shape = SubResource( 1 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Inactif"
-frame = 3
+frame = 4
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

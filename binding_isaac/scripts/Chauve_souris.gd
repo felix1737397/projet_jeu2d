@@ -11,7 +11,6 @@ onready var pos_joueur = get_parent().get_node("Joueur")
 
 
 func hit():
-	
 	vie -= 1
 	if vie == 0:
 		queue_free()

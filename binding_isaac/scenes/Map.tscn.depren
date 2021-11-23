@@ -2,7 +2,7 @@
 
 [ext_resource path="res://ressources/Map_Assets/Zeldisaac/Tileset.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Coffre.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Joueur.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Joueur.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Vase.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/feu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/roche.tscn" type="PackedScene" id=6]

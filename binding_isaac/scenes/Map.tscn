@@ -1,12 +1,12 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://ressources/Map_Assets/Zeldisaac/Tileset.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Coffre.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Joueur.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Vase.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/feu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/roche.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Globber.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Porte.tscn" type="PackedScene" id=8]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -406,9 +406,6 @@ position = Vector2( 1367.53, 270.243 )
 [node name="chaudron" parent="." instance=ExtResource( 4 )]
 position = Vector2( 743.41, 380.917 )
 
-[node name="feu" parent="." instance=ExtResource( 5 )]
-position = Vector2( 635.287, 223.234 )
-
 [node name="Joueur" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1248.37, 539.641 )
 
@@ -417,3 +414,6 @@ position = Vector2( 676.727, 438.292 )
 
 [node name="Globber" parent="." instance=ExtResource( 7 )]
 position = Vector2( 602.081, 662.626 )
+
+[node name="Porte" parent="." instance=ExtResource( 8 )]
+position = Vector2( 950.913, 56.981 )

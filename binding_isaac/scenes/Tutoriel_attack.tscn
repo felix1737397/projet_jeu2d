@@ -517,21 +517,10 @@ tile_data = PoolIntArray( 0, 4, 0, 1, 4, 3, 2, 4, 3, 3, 4, 3, 4, 4, 3, 5, 4, 3, 
 position = Vector2( 1073.42, 528.908 )
 
 [node name="Chauve_souris" parent="." instance=ExtResource( 5 )]
-position = Vector2( 612.401, 371.159 )
-
-[node name="Chauve_souris2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 563.469, 516.051 )
+position = Vector2( 566.71, 604.423 )
 
 [node name="Chauve_souris3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 367.885, 411.396 )
-vitesse = 100
-
-[node name="Chauve_souris4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 367.885, 563.432 )
-vitesse = 100
-
-[node name="Chauve_souris5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 589.256, 689.745 )
 vitesse = 100
 
 [node name="Retour" type="Label" parent="."]

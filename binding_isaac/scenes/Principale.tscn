@@ -1,86 +1,24 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/Argent.gd" type="Script" id=1]
-[ext_resource path="res://scenes/Menu_en_jeu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ressources/Isaak/argent.png" type="Texture" id=3]
-[ext_resource path="res://ressources/Isaak/Yum_Heart_Icon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/Joueur.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ressources/Police/IsaacGame.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scripts/Principale.gd" type="Script" id=7]
 [ext_resource path="res://scenes/Chauve_souris.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/map3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/Globber.tscn" type="PackedScene" id=10]
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
-outline_color = Color( 0.835294, 0.713726, 0.611765, 1 )
-font_data = ExtResource( 6 )
 
 [node name="Principale" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Map" parent="." instance=ExtResource( 9 )]
 
-[node name="Texte_argent" type="Label" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = 1767.0
-margin_top = 18.0
-margin_right = 1846.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.835294, 0.713726, 0.611765, 1 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_left = 4.92822
-margin_right = 1916.93
-margin_bottom = 1114.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Popup" type="Popup" parent="MarginContainer"]
-margin_right = 1912.0
-margin_bottom = 1114.0
-
-[node name="Menu_en_jeu" parent="MarginContainer/Popup" instance=ExtResource( 2 )]
-
-[node name="Vie" type="TextureRect" parent="."]
-margin_left = -2.96188
-margin_top = -12.9846
-margin_right = 497.038
-margin_bottom = 487.015
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Argent" type="TextureRect" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = 1810.46
-margin_top = -13.6753
-margin_right = 2310.46
-margin_bottom = 486.325
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 3 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-
 [node name="Chauve_souris" parent="." instance=ExtResource( 8 )]
-position = Vector2( 246.69, 310.986 )
+position = Vector2( 1738.65, 886.07 )
 
 [node name="Joueur" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1705.88, 525.665 )
 
 [node name="Globber" parent="." instance=ExtResource( 10 )]
-position = Vector2( 175.095, 549.63 )
+position = Vector2( 137.44, 541.11 )
+
+[node name="Chauve_souris2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1704.18, 189.265 )

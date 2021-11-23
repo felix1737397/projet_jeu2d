@@ -18,11 +18,6 @@ height = 8.99338
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "Inactfif",
-"speed": 3.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 3 ) ],
 "loop": false,
 "name": "Cache",
@@ -33,15 +28,15 @@ animations = [ {
 "name": "Attaque",
 "speed": 3.0
 }, {
+"frames": [ ExtResource( 3 ), ExtResource( 10 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "Aparait",
+"speed": 3.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Inactfif",
 "speed": 3.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": false,
-"name": "Cache",
-"speed": 5.0
 } ]
 
 [node name="Globber" type="KinematicBody2D" groups=[
@@ -55,7 +50,7 @@ script = ExtResource( 11 )
 [node name="Position2D" type="Position2D" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 1.5
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -67,3 +62,4 @@ frames = SubResource( 2 )
 animation = "Aparait"
 frame = 2
 playing = true
+flip_h = true

@@ -12,11 +12,11 @@
 [ext_resource path="res://ressources/Isaak/Glizzy2.png" type="Texture" id=10]
 [ext_resource path="res://scripts/Globber.gd" type="Script" id=11]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 7.80313
 height = 8.99338
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 3 ) ],
 "loop": false,
@@ -28,14 +28,14 @@ animations = [ {
 "name": "Inactfif",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": false,
-"name": "Attaque",
-"speed": 3.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 10 ), ExtResource( 1 ) ],
 "loop": false,
 "name": "Aparait",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "Attaque",
 "speed": 3.0
 } ]
 
@@ -51,10 +51,10 @@ one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.33371, -6.00677 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "Aparait"
 frame = 2
 playing = true

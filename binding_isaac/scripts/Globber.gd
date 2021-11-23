@@ -5,6 +5,8 @@ var Bullet = preload("res://scenes/BalleGlobber.tscn")
 export var vie = 2
 var velocite = Vector2()
 export var vitesse = 100
+
+
 onready var pos_joueur = get_parent().get_node("Joueur")
 var dir
 

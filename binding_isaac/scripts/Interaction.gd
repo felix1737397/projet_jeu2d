@@ -13,6 +13,7 @@ func _process(delta):
 	if ouvrir == true:
 		if Input.is_action_just_pressed("E"):
 			$StaticBody2D/Coffre.play("Ouvre")
+			VariableGlobales.joueur_argent += 1;
 			if once == true:
 				var a = coin.instance()
 				get_parent().add_child(a)

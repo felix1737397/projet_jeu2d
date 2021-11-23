@@ -15,13 +15,14 @@ func _physics_process(delta):
 	pause()
 				
 func pause():
+	
+
 	if Input.is_action_just_pressed("esc"):
+		get_tree().paused = true
 		$MarginContainer/Popup.show()
-		print("test")
 		$CanvasModulate.set_color(Color(1,0,0))
-		yield(get_tree().create_timer(2.0), "timeout")	
 		
-		if Input.is_action_just_pressed("esc"):
+		if Input.is_action_just_pressed("ui_home"):
 			$MarginContainer/Popup.hide()
 			
 			

@@ -33,7 +33,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 14.6127, 9.19065 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Feu" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2( 2, 3 )

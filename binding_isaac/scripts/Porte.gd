@@ -13,7 +13,8 @@ func _process(delta):
 		if ouvrir == true:
 			if Input.is_action_just_pressed("E"):
 				if VariableGlobales.joueur_clef == true:
-					get_tree().change_scene("res://scenes/mapboss.tscn")
+					get_tree().change_scene("res://scenes/magasin.tscn")
+					VariableGlobales.joueur_clef = false
 				else: 
 					get_tree().change_scene(endroit)
 			

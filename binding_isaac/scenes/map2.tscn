@@ -457,9 +457,6 @@ position = Vector2( -51.8262, 0 )
 [node name="Coin" parent="." instance=ExtResource( 9 )]
 position = Vector2( 339.794, 749.436 )
 
-[node name="Joueur" parent="." instance=ExtResource( 3 )]
-position = Vector2( 139.772, 880.68 )
-
 [node name="Hud" parent="." instance=ExtResource( 10 )]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -482,7 +479,11 @@ margin_bottom = 1083.0
 
 [node name="Menu_en_jeu" parent="MarginContainer/Popup" instance=ExtResource( 11 )]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-
 [node name="CoffreClef" parent="." instance=ExtResource( 6 )]
-position = Vector2( 142.773, 307.849 )
+position = Vector2( 141.27, 338.418 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+scale = Vector2( 1, 1.03533 )
+
+[node name="Joueur" parent="." instance=ExtResource( 3 )]
+position = Vector2( 891.991, 870.085 )

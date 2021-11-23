@@ -5,7 +5,7 @@ var Bullet = preload("res://scenes/bras_boss.tscn")
 export var vie = 20
 export var rotate = 1
 var velocite = Vector2()
-var bulletVelocity = 1000
+export var bulletVelocity = 1000
 var dir; 
 var boucle = 0
 	#var dir = (pos_joueur.global_position - global_position).normalized()
@@ -37,7 +37,7 @@ func Tirer():
 		$Timer.start()
 
 func hit():
-	vie -= 20
+	vie -= 1
 	if vie == 0:
 		$Sprite.play("mort")
 		$CollisionShape2D.queue_free()

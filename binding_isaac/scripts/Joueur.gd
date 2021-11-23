@@ -102,3 +102,5 @@ func hit():
 		yield(get_tree().create_timer(1.45), "timeout")
 		VariableGlobales.joueur_clef = false
 		get_tree().change_scene("res://scenes/Menu_principal.tscn")
+		VariableGlobales.joueur_vie = 1
+		VariableGlobales.joueur_argent = 0

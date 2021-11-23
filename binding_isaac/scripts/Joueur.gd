@@ -99,4 +99,5 @@ func hit():
 	if vie == 0:
 		$Isaak.play("Mort")
 		yield(get_tree().create_timer(1.45), "timeout")
+		VariableGlobales.joueur_clef = false
 		get_tree().change_scene("res://scenes/Menu_principal.tscn")

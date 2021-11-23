@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/Joueur.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Vase.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Chauve_souris.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Coffre.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/CoffreCoin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Globber.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Porte.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/feu.tscn" type="PackedScene" id=10]
@@ -418,6 +418,7 @@ tile_data = PoolIntArray( 0, 4, 0, 1, 4, 3, 2, 4, 3, 3, 4, 3, 4, 4, 3, 5, 4, 3, 
 
 [node name="Porte" parent="." instance=ExtResource( 8 )]
 position = Vector2( 962.383, 56.981 )
+endroit = "res://scenes/Map2.tscn"
 
 [node name="Globber" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1295.32, 118.981 )

@@ -13,8 +13,7 @@ func _process(delta):
 	if target == true:
 		$Particles2D.set_emitting(true)
 		yield(get_tree().create_timer(.5), "timeout")
-		$Coin.set_visible(false)
-		$Shadow.set_visible(false)
+		$Clef.set_visible(false)
 		yield(get_tree().create_timer(.5), "timeout")
 		queue_free()
 

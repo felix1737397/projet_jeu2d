@@ -75,6 +75,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Inactif",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 26 ), ExtResource( 11 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 1 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 63 ), ExtResource( 37 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 49 ) ],
 "loop": true,
 "name": "Droite",
@@ -84,11 +89,6 @@ animations = [ {
 "loop": true,
 "name": "Gauche",
 "speed": 7.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 19 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Inactif",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 20 ) ],
 "loop": true,
@@ -121,7 +121,7 @@ script = ExtResource( 36 )
 [node name="Isaak" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Inactif"
-frame = 7
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -137,10 +137,10 @@ one_shot = true
 position = Vector2( 0, 31.8304 )
 
 [node name="Gauche" type="Position2D" parent="."]
-position = Vector2( -12.8, 0 )
+position = Vector2( -15.2, 0 )
 
 [node name="Droite" type="Position2D" parent="."]
-position = Vector2( 13, 0 )
+position = Vector2( 15.8, 0 )
 
 [node name="Haut" type="Position2D" parent="."]
 position = Vector2( 0.2, -14.2 )

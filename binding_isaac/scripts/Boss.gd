@@ -34,12 +34,10 @@ func Tirer():
 		b.start($position_tir_bras.global_position, 0)
 		get_parent().add_child(b)
 		$Sprite.play("Lancer_bras")
-		if $Timer2.time % 2 == 0:
-			b.queue_free()
 		$Timer.start()
 
 func hit():
-	vie -=10
+	vie -= 1
 	if vie == 0:
 		$Sprite.play("mort")
 		$CollisionShape2D.queue_free()

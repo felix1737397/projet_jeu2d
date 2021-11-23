@@ -23,14 +23,14 @@ animations = [ {
 "name": "Cache",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": false,
-"name": "Attaque",
-"speed": 3.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Inactfif",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "Attaque",
 "speed": 3.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 10 ), ExtResource( 1 ) ],
@@ -41,6 +41,7 @@ animations = [ {
 
 [node name="Globber" type="KinematicBody2D"]
 scale = Vector2( 2, 2 )
+collision_layer = 2
 collision_mask = 2
 script = ExtResource( 11 )
 
